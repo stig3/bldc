@@ -63,8 +63,8 @@
 //#define HW_SOURCE "hw_49.c"
 //#define HW_HEADER "hw_49.h"
 
-//#define HW_SOURCE "hw_410.c" // Also for 4.11 and 4.12
-//#define HW_HEADER "hw_410.h" // Also for 4.11 and 4.12
+#define HW_SOURCE "hw_410.c" // Also for 4.11 and 4.12
+#define HW_HEADER "hw_410.h" // Also for 4.11 and 4.12
 
 //#define HW_SOURCE "hw_gesc.c"
 //#define HW_HEADER "hw_gesc.h"
@@ -72,10 +72,10 @@
 // Mark3 version of HW60 with power switch and separate NRF UART.
 //#define HW60_IS_MK3
 //#define HW60_IS_MK4
-#define HW60_IS_MK5
+//#define HW60_IS_MK5
 
-#define HW_SOURCE "hw_60.c"
-#define HW_HEADER "hw_60.h"
+//#define HW_SOURCE "hw_60.c"
+//#define HW_HEADER "hw_60.h"
 
 //#define HW_SOURCE "hw_r2.c"
 //#define HW_HEADER "hw_r2.h"
@@ -305,12 +305,12 @@
 #define AD2S1205_USE_HW_SPI_PINS	0
 #endif
 #ifndef MT6816_USE_HW_SPI_PINS
-#define MT6816_USE_HW_SPI_PINS		0
+#define MT6816_USE_HW_SPI_PINS		1
 #endif
 #ifndef AS504x_USE_SW_MOSI_PIN
 #define AS504x_USE_SW_MOSI_PIN 		0
 #endif
-
+#define HW_SPI_DEV                  SPID1
 /*
  * MCU
  */

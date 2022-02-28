@@ -113,9 +113,9 @@
 #define HW_UART_DEV				SD6
 #define HW_UART_GPIO_AF			GPIO_AF_USART6
 #define HW_UART_TX_PORT			GPIOC
-#define HW_UART_TX_PIN			6
+#define HW_UART_TX_PIN			14
 #define HW_UART_RX_PORT			GPIOC
-#define HW_UART_RX_PIN			7
+#define HW_UART_RX_PIN			15
 
 // ICU Peripheral for servo decoding
 #define HW_ICU_TIMER			TIM3
@@ -129,10 +129,10 @@
 // I2C Peripheral
 #define HW_I2C_DEV				I2CD2
 #define HW_I2C_GPIO_AF			GPIO_AF_I2C2
-#define HW_I2C_SCL_PORT			GPIOB
-#define HW_I2C_SCL_PIN			10
-#define HW_I2C_SDA_PORT			GPIOB
-#define HW_I2C_SDA_PIN			11
+#define HW_I2C_SCL_PORT			GPIOC
+#define HW_I2C_SCL_PIN			14
+#define HW_I2C_SDA_PORT			GPIOC
+#define HW_I2C_SDA_PIN			15
 
 // Hall/encoder pins
 #define HW_HALL_ENC_GPIO1		GPIOB
