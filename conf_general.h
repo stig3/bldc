@@ -1,9 +1,9 @@
 /*
-	Copyright 2017 - 2021 Benjamin Vedder	benjamin@vedder.se
+    Copyright 2017 - 2021 Benjamin Vedder	benjamin@vedder.se
 
-	This file is part of the VESC firmware.
+    This file is part of the VESC firmware.
 
-	The VESC firmware is free software: you can redistribute it and/or modify
+    The VESC firmware is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -20,7 +20,7 @@
 #ifndef CONF_GENERAL_H_
 #define CONF_GENERAL_H_
 
-// Firmware version
+    // Firmware version
 #define FW_VERSION_MAJOR			5
 #define FW_VERSION_MINOR			03
 // Set to 0 for building a release and iterate during beta test builds
@@ -48,20 +48,20 @@
  * as an argument.
  */
 #if !defined(HW_SOURCE) && !defined(HW_HEADER)
-//#define HW_SOURCE "hw_40.c"
-//#define HW_HEADER "hw_40.h"
+ //#define HW_SOURCE "hw_40.c"
+ //#define HW_HEADER "hw_40.h"
 
-//#define HW_SOURCE "hw_45.c"
-//#define HW_HEADER "hw_45.h"
+ //#define HW_SOURCE "hw_45.c"
+ //#define HW_HEADER "hw_45.h"
 
-//#define HW_SOURCE "hw_46.c" // Also for 4.7
-//#define HW_HEADER "hw_46.h" // Also for 4.7
+ //#define HW_SOURCE "hw_46.c" // Also for 4.7
+ //#define HW_HEADER "hw_46.h" // Also for 4.7
 
-//#define HW_SOURCE "hw_48.c"
-//#define HW_HEADER "hw_48.h"
+ //#define HW_SOURCE "hw_48.c"
+ //#define HW_HEADER "hw_48.h"
 
-//#define HW_SOURCE "hw_49.c"
-//#define HW_HEADER "hw_49.h"
+ //#define HW_SOURCE "hw_49.c"
+ //#define HW_HEADER "hw_49.h"
 
 #define HW_SOURCE "hw_410.c" // Also for 4.11 and 4.12
 #define HW_HEADER "hw_410.h" // Also for 4.11 and 4.12
@@ -225,29 +225,29 @@
 /*
  * Select default user motor configuration
  */
-//#include			"mcconf_default.h"
-//#include 			"mcconf_china_60kv.h"
+ //#include			"mcconf_default.h"
+ //#include 			"mcconf_china_60kv.h"
 
-/*
- * Select default user app configuration
- */
-//#include			"appconf_example_ppm.h"
-//#include			"appconf_custom.h"
+ /*
+  * Select default user app configuration
+  */
+  //#include			"appconf_example_ppm.h"
+  //#include			"appconf_custom.h"
 
-/*
- * Set APP_CUSTOM_TO_USE to the name of the main C file of the custom application.
- */
-//#define APP_CUSTOM_TO_USE			"app_custom_template.c"
-//#define APP_CUSTOM_TO_USE			"app_motor_heater.c"
-//#include "er/app_erockit_conf_v2.h"
-//#include "finn/app_finn_az_conf.h"
-//#include "vccu/app_vccu_conf.h"
-//#include "pitch/app_pitch_conf.h"
+  /*
+   * Set APP_CUSTOM_TO_USE to the name of the main C file of the custom application.
+   */
+   //#define APP_CUSTOM_TO_USE			"app_custom_template.c"
+   //#define APP_CUSTOM_TO_USE			"app_motor_heater.c"
+   //#include "er/app_erockit_conf_v2.h"
+   //#include "finn/app_finn_az_conf.h"
+   //#include "vccu/app_vccu_conf.h"
+   //#include "pitch/app_pitch_conf.h"
 
-// CAN-plotter
-//#define APP_CUSTOM_TO_USE			"app_plot_can.c"
-//#define APPCONF_APP_TO_USE			APP_CUSTOM
-//#define APPCONF_CAN_BAUD_RATE		CAN_BAUD_75K
+   // CAN-plotter
+   //#define APP_CUSTOM_TO_USE			"app_plot_can.c"
+   //#define APPCONF_APP_TO_USE			APP_CUSTOM
+   //#define APPCONF_CAN_BAUD_RATE		CAN_BAUD_75K
 
 #include "hw.h"
 #include "mcconf_default.h"
@@ -260,9 +260,9 @@
 #define HAS_BLACKMAGIC				1
 #endif
 
-/*
- * Enable CAN-bus
- */
+ /*
+  * Enable CAN-bus
+  */
 #ifndef CAN_ENABLE
 #define CAN_ENABLE					1
 #endif
@@ -272,20 +272,20 @@
 #define CAN_ENABLE 					0
 #endif
 
-/*
- * Settings for the external LEDs (hardcoded for now)
- */
+  /*
+   * Settings for the external LEDs (hardcoded for now)
+   */
 #define LED_EXT_BATT_LOW			28.0
 #define LED_EXT_BATT_HIGH			33.0
 
-/*
- * Servo output driver
- */
+   /*
+    * Servo output driver
+    */
 #define SERVO_OUT_PULSE_MIN_US		1000	// Minimum pulse length in microseconds
 #define SERVO_OUT_PULSE_MAX_US		2000	// Maximum pulse length in microseconds
 #define SERVO_OUT_RATE_HZ			50		// Update rate in Hz
 
-// Correction factor for computations that depend on the old resistor division factor
+    // Correction factor for computations that depend on the old resistor division factor
 #define VDIV_CORR					((VIN_R2 / (VIN_R2 + VIN_R1)) / (2.2 / (2.2 + 33.0)))
 
 // Current ADC to amperes factor
@@ -308,7 +308,7 @@
 #define MT6816_USE_HW_SPI_PINS		1
 #endif
 #ifndef AS504x_USE_SW_MOSI_PIN
-#define AS504x_USE_SW_MOSI_PIN 		1
+#define AS504x_USE_SW_MOSI_PIN 		0
 #endif
 #define HW_SPI_DEV                  SPID1
 /*
@@ -318,57 +318,57 @@
 #define STM32_UUID					((uint32_t*)0x1FFF7A10)
 #define STM32_UUID_8				((uint8_t*)0x1FFF7A10)
 
-/*
- *	Run the BLDC speed controller in current mode instead of duty cycle mode. This will
- *	make it behave like the FOC speed controller. The duty cycle mode has the advantage
- *	that it does not require the extra current controller since bldc inherently runs
- *	with duty cycle control. The current controller also outputs a duty cycle in the
- *	end, and then the speed controller might as well do the same without the current
- *	controller dynamics in between. FOC on the other hand is inherently based on current
- *	control.
- */
+ /*
+  *	Run the BLDC speed controller in current mode instead of duty cycle mode. This will
+  *	make it behave like the FOC speed controller. The duty cycle mode has the advantage
+  *	that it does not require the extra current controller since bldc inherently runs
+  *	with duty cycle control. The current controller also outputs a duty cycle in the
+  *	end, and then the speed controller might as well do the same without the current
+  *	controller dynamics in between. FOC on the other hand is inherently based on current
+  *	control.
+  */
 #define BLDC_SPEED_CONTROL_CURRENT	1
 
-/*
- *	Run the FOC loop once every N ADC ISR requests. This way the pwm frequency is
- *	detached from the FOC calculation, which because it takes ~25usec it can't work
- *	at >40khz. To set a 100kHz pwm FOC_CONTROL_LOOP_FREQ_DIVIDER can be set at 3
- *	so it skips 2 ISR calls and execute the control loop in the 3rd call.
- */
+  /*
+   *	Run the FOC loop once every N ADC ISR requests. This way the pwm frequency is
+   *	detached from the FOC calculation, which because it takes ~25usec it can't work
+   *	at >40khz. To set a 100kHz pwm FOC_CONTROL_LOOP_FREQ_DIVIDER can be set at 3
+   *	so it skips 2 ISR calls and execute the control loop in the 3rd call.
+   */
 #ifndef FOC_CONTROL_LOOP_FREQ_DIVIDER
 #define FOC_CONTROL_LOOP_FREQ_DIVIDER	1
 #endif
 
-// Global configuration variables
+   // Global configuration variables
 extern bool conf_general_permanent_nrf_found;
 extern volatile backup_data g_backup;
 
 // Functions
 void conf_general_init(void);
 bool conf_general_store_backup_data(void);
-bool conf_general_read_eeprom_var_hw(eeprom_var *v, int address);
-bool conf_general_read_eeprom_var_custom(eeprom_var *v, int address);
-bool conf_general_store_eeprom_var_hw(eeprom_var *v, int address);
-bool conf_general_store_eeprom_var_custom(eeprom_var *v, int address);
-void conf_general_read_app_configuration(app_configuration *conf);
-bool conf_general_store_app_configuration(app_configuration *conf);
-void conf_general_read_mc_configuration(mc_configuration *conf, bool is_motor_2);
-bool conf_general_store_mc_configuration(mc_configuration *conf, bool is_motor_2);
+bool conf_general_read_eeprom_var_hw(eeprom_var* v, int address);
+bool conf_general_read_eeprom_var_custom(eeprom_var* v, int address);
+bool conf_general_store_eeprom_var_hw(eeprom_var* v, int address);
+bool conf_general_store_eeprom_var_custom(eeprom_var* v, int address);
+void conf_general_read_app_configuration(app_configuration* conf);
+bool conf_general_store_app_configuration(app_configuration* conf);
+void conf_general_read_mc_configuration(mc_configuration* conf, bool is_motor_2);
+bool conf_general_store_mc_configuration(mc_configuration* conf, bool is_motor_2);
 bool conf_general_detect_motor_param(float current, float min_rpm, float low_duty,
-		float *int_limit, float *bemf_coupling_k, int8_t *hall_table, int *hall_res);
+    float* int_limit, float* bemf_coupling_k, int8_t* hall_table, int* hall_res);
 bool conf_general_measure_flux_linkage(float current, float duty,
-		float min_erpm, float res, float *linkage);
+    float min_erpm, float res, float* linkage);
 uint8_t conf_general_calculate_deadtime(float deadtime_ns, float core_clock_freq);
 bool conf_general_measure_flux_linkage_openloop(float current, float duty,
-		float erpm_per_sec, float res, float ind, float *linkage,
-		float *linkage_undriven, float *undriven_samples);
+    float erpm_per_sec, float res, float ind, float* linkage,
+    float* linkage_undriven, float* undriven_samples);
 int conf_general_autodetect_apply_sensors_foc(float current,
-		bool store_mcconf_on_success, bool send_mcconf_on_success);
-void conf_general_calc_apply_foc_cc_kp_ki_gain(mc_configuration *mcconf, float tc);
+    bool store_mcconf_on_success, bool send_mcconf_on_success);
+void conf_general_calc_apply_foc_cc_kp_ki_gain(mc_configuration* mcconf, float tc);
 int conf_general_detect_apply_all_foc(float max_power_loss,
-		bool store_mcconf_on_success, bool send_mcconf_on_success);
+    bool store_mcconf_on_success, bool send_mcconf_on_success);
 int conf_general_detect_apply_all_foc_can(bool detect_can, float max_power_loss,
-		float min_current_in, float max_current_in, float openloop_rpm, float sl_erpm);
+    float min_current_in, float max_current_in, float openloop_rpm, float sl_erpm);
 
 
 #endif /* CONF_GENERAL_H_ */
